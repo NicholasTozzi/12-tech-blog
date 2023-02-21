@@ -1,0 +1,23 @@
+{{! TODO: Edit handlebars }}
+{{#each blogposts as |blogpost|}}
+
+  <div>
+
+    <div>
+      <h2>
+        <a href="/blogpost/{{blogpost.id}}">{{blogpost.name}}</a>
+        <p>Created by
+          {{blogpost.user.name}}
+          on
+          {{format_date blogpost.date_created}}</p>
+        <p></p>
+      </h2>
+    </div>
+
+    <p>
+      {{blogpost.description}}
+    </p>
+
+  </div>
+
+{{/each}}
